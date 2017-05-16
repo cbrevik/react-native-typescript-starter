@@ -1,0 +1,9 @@
+{
+    "compilerOptions": {
+        "target": "es2015",
+        "module": "es2015",
+        "moduleResolution": "node",
+        "jsx": "react-native",
+        "allowSyntheticDefaultImports": true
+    }
+}
