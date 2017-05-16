@@ -13,6 +13,8 @@ Important files
 * [`tsconfig.json`](./tsconfig.json)
     * Needed config for the TS compiler
 
+App source code is found under the [src folder](./src). 
+
 Required packages (see [`package.json`](./package.json))
 ---
 * react-native >= `0.45.0` (RC as of this writing).
@@ -21,7 +23,4 @@ Required packages (see [`package.json`](./package.json))
 Type definitions are also nice to have:
 * @types/react
 * @types/react-native
-
-
-App source code is found under the [src folder](./src). 
 
