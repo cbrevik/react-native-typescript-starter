@@ -11,8 +11,16 @@ interface Props {
 }
 
 class CounterContainer extends Component<Props, {}> {
+    intervalId: number;
+
     constructor(props) {
         super(props);
+    }
+
+    componentDidMount() {
+        this.intervalId = setInterval(() => {
+            this.props.increment();
+        }, 1000)
     }
 
     render() {

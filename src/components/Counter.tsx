@@ -14,8 +14,8 @@ export default class Counter extends Component<Props, {}> {
             <View style={styles.container}>
                 <Text style={styles.counterText}>{this.props.count}</Text>
                 <View style={styles.buttonContainer}>
-                    <Button text="Increment" onPress={this.props.increment} backgroundColor="#4CAF50" />
                     <Button text="Decrement" onPress={this.props.decrement} backgroundColor="#F44336" />
+                    <Button text="Increment" onPress={this.props.increment} backgroundColor="#4CAF50" />
                 </View>
             </View>
         );
