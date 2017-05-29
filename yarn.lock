@@ -910,15 +910,9 @@ browser-resolve@^1.11.2:
   dependencies:
     resolve "1.1.7"
 
-bser@1.0.2:
+bser@1.0.2, bser@^1.0.2:
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/bser/-/bser-1.0.2.tgz#381116970b2a6deea5646dd15dd7278444b56169"
-  dependencies:
-    node-int64 "^0.4.0"
-
-bser@^1.0.2:
-  version "1.0.3"
-  resolved "https://registry.yarnpkg.com/bser/-/bser-1.0.3.tgz#d63da19ee17330a0e260d2a34422b21a89520317"
   dependencies:
     node-int64 "^0.4.0"
 
@@ -2143,6 +2137,10 @@ jest-docblock@^20.0.1:
   version "20.0.1"
   resolved "https://registry.yarnpkg.com/jest-docblock/-/jest-docblock-20.0.1.tgz#055e0bbcb76798198479901f92d2733bf619f854"
 
+jest-docblock@^20.0.3:
+  version "20.0.3"
+  resolved "https://registry.yarnpkg.com/jest-docblock/-/jest-docblock-20.0.3.tgz#17bea984342cc33d83c50fbe1545ea0efaa44712"
+
 jest-environment-jsdom@^20.0.1:
   version "20.0.1"
   resolved "https://registry.yarnpkg.com/jest-environment-jsdom/-/jest-environment-jsdom-20.0.1.tgz#2d29f81368987d387c70ce4f500c6aa560f9b4f7"
@@ -2158,16 +2156,6 @@ jest-environment-node@^20.0.1:
     jest-mock "^20.0.1"
     jest-util "^20.0.1"
 
-jest-haste-map@19.0.0:
-  version "19.0.0"
-  resolved "https://registry.yarnpkg.com/jest-haste-map/-/jest-haste-map-19.0.0.tgz#adde00b62b1fe04432a104b3254fc5004514b55e"
-  dependencies:
-    fb-watchman "^2.0.0"
-    graceful-fs "^4.1.6"
-    micromatch "^2.3.11"
-    sane "~1.5.0"
-    worker-farm "^1.3.1"
-
 jest-haste-map@^20.0.1:
   version "20.0.1"
   resolved "https://registry.yarnpkg.com/jest-haste-map/-/jest-haste-map-20.0.1.tgz#e6ba4db99ab512e7c081a5b0a0af731d0e193d56"
@@ -2175,6 +2163,17 @@ jest-haste-map@^20.0.1:
     fb-watchman "^2.0.0"
     graceful-fs "^4.1.11"
     jest-docblock "^20.0.1"
+    micromatch "^2.3.11"
+    sane "~1.6.0"
+    worker-farm "^1.3.1"
+
+jest-haste-map@^20.0.4:
+  version "20.0.4"
+  resolved "https://registry.yarnpkg.com/jest-haste-map/-/jest-haste-map-20.0.4.tgz#653eb55c889ce3c021f7b94693f20a4159badf03"
+  dependencies:
+    fb-watchman "^2.0.0"
+    graceful-fs "^4.1.11"
+    jest-docblock "^20.0.3"
     micromatch "^2.3.11"
     sane "~1.6.0"
     worker-farm "^1.3.1"
@@ -3201,9 +3200,9 @@ react-native-typescript-transformer@^1.0.5:
     source-map "^0.5.6"
     typescript "^2.3.2"
 
-react-native@0.45.0-rc.0:
-  version "0.45.0-rc.0"
-  resolved "https://registry.yarnpkg.com/react-native/-/react-native-0.45.0-rc.0.tgz#acf99f4c4098e51afcd4451f942bf305d2bdf847"
+react-native@0.45.0-rc.2:
+  version "0.45.0-rc.2"
+  resolved "https://registry.yarnpkg.com/react-native/-/react-native-0.45.0-rc.2.tgz#e28c048403f6c13cb0d201ce0577549181558367"
   dependencies:
     absolute-path "^0.0.0"
     art "^0.10.0"
@@ -3244,7 +3243,7 @@ react-native@0.45.0-rc.0:
     graceful-fs "^4.1.3"
     image-size "^0.3.5"
     inquirer "^0.12.0"
-    jest-haste-map "19.0.0"
+    jest-haste-map "^20.0.4"
     joi "^6.6.1"
     json-stable-stringify "^1.0.1"
     json5 "^0.4.0"
@@ -3567,18 +3566,6 @@ sane@~1.4.1:
   version "1.4.1"
   resolved "https://registry.yarnpkg.com/sane/-/sane-1.4.1.tgz#88f763d74040f5f0c256b6163db399bf110ac715"
   dependencies:
-    exec-sh "^0.2.0"
-    fb-watchman "^1.8.0"
-    minimatch "^3.0.2"
-    minimist "^1.1.1"
-    walker "~1.0.5"
-    watch "~0.10.0"
-
-sane@~1.5.0:
-  version "1.5.0"
-  resolved "https://registry.yarnpkg.com/sane/-/sane-1.5.0.tgz#a4adeae764d048621ecb27d5f9ecf513101939f3"
-  dependencies:
-    anymatch "^1.3.0"
     exec-sh "^0.2.0"
     fb-watchman "^1.8.0"
     minimatch "^3.0.2"
