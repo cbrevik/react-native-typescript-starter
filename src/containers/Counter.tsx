@@ -34,7 +34,8 @@ class CounterContainer extends Component<ConnectProps & DispatchProps, {}> {
 
 export default connect<ConnectProps, DispatchProps>(
   (state: AppState) => ({
-    count: state.counter.count
+    count: state.counter.count,
+    sometthing: 0
   }),
   (dispatch: Dispatch) => ({
     increment: () => dispatch(CounterActions.increment()),
