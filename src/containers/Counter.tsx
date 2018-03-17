@@ -1,39 +1,43 @@
-import React, { Component } from 'react';
-import { bindActionCreators } from 'redux';
-import Counter from '../components/Counter';
-import * as CounterActions from '../redux/counter/actions';
-import { connect } from 'react-redux';
+import React, { Component } from "react";
+import { bindActionCreators } from "redux";
+import Counter from "../components/Counter";
+import * as CounterActions from "../redux/counter/actions";
+import { connect } from "react-redux";
+import { Dispatch, AppState } from "../redux";
 
-interface Props {
-    count: number,
-    increment: () => any,
-    decrement: () => any
+interface ConnectProps {
+  count: number;
 }
 
-class CounterContainer extends Component<Props, {}> {
-    intervalId: number;
-
-    constructor(props) {
-        super(props);
-    }
-
-    componentDidMount() {
-        this.intervalId = setInterval(() => {
-            this.props.increment();
-        }, 1000)
-    }
-
-    render() {
-        return (
-            <Counter
-                {...this.props} />
-        );
-    }
+interface DispatchProps {
+  increment: () => any;
+  decrement: () => any;
 }
 
-export default connect(state => ({
+class CounterContainer extends Component<ConnectProps & DispatchProps, {}> {
+  intervalId: number;
+
+  constructor(props) {
+    super(props);
+  }
+
+  componentDidMount() {
+    this.intervalId = setInterval(() => {
+      this.props.increment();
+    }, 1000);
+  }
+
+  render() {
+    return <Counter {...this.props} />;
+  }
+}
+
+export default connect<ConnectProps, DispatchProps>(
+  (state: AppState) => ({
     count: state.counter.count
-}), (dispatch) => ({
+  }),
+  (dispatch: Dispatch) => ({
     increment: () => dispatch(CounterActions.increment()),
     decrement: () => dispatch(CounterActions.decrement())
-}))(CounterContainer);
+  })
+)(CounterContainer);
